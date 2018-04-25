@@ -17,6 +17,8 @@ computeSum' f xs = sum $ zipWith keepEquals xs (f xs)
 
 shiftOne :: [Int] -> [Int]
 shiftOne xs = tail xs ++ [head xs]
+-- shiftOne = (++) <$> tail <*> (\xs -> [head xs])
+-- shiftOne = (++) <$> tail <*> pure . head
 
 shiftMid :: [Int] -> [Int]
 shiftMid xs = right ++ left
