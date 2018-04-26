@@ -1,0 +1,54 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 77c70d580535754de574b19b98e3e0fb6cb7187b78219178c2478fceb5214717
+
+name:           advent2017
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/alexpeits/advent2017#readme>
+homepage:       https://github.com/alexpeits/advent2017#readme
+bug-reports:    https://github.com/alexpeits/advent2017/issues
+author:         Alexandros Peitsinis
+maintainer:     alexpeitsinis@gmail.com
+copyright:      2018 Alexandros Peitsinis
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/alexpeits/advent2017
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , mtl
+    , filepath
+  exposed-modules:
+      Util
+      Day01
+  other-modules:
+      Paths_advent2017
+  default-language: Haskell2010
+
+test-suite advent2017-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      advent2017
+    , base >=4.7 && <5
+  other-modules:
+      Paths_advent2017
+  default-language: Haskell2010
