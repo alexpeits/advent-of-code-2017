@@ -3,9 +3,6 @@ module Day01 where
 import Data.Char (digitToInt)
 import Util (readInput, printResults)
 
-day :: Int
-day = 1
-
 computeSum :: [Int] -> Int
 computeSum xs = sum $ zipWith keepEquals xs xs'
   where keepEquals a b = if a == b then a else 0
@@ -27,6 +24,7 @@ shiftMid xs = right ++ left
 
 main :: IO ()
 main = do
+  let day = 1
   input <- fmap digitToInt <$> readInput day
   printResults day [
     computeSum' shiftOne input,
