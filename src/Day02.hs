@@ -21,5 +21,3 @@ main = do
     computeChecksum input,
     computeChecksum' input
     ]
-
--- binary
