@@ -33,6 +33,7 @@ library
     , filepath
     , containers
     , vector
+    , split
     , parsec
     , mtl
   exposed-modules:

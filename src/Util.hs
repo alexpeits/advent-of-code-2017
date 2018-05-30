@@ -1,5 +1,6 @@
 module Util (
   readInput,
+  readInputWords,
   readInputLines,
   printResults
   ) where
@@ -14,6 +15,9 @@ getInputPath day = "src" </> "Day" ++ getDayDisplay day <.> "txt"
 
 readInput :: Int -> IO String
 readInput = readFile . getInputPath
+
+readInputWords :: Int -> IO [String]
+readInputWords = fmap words . readInput
 
 readInputLines :: Int -> IO [String]
 readInputLines = fmap lines . readInput
